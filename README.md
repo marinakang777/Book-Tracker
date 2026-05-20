@@ -113,3 +113,25 @@ Ubuntu/Debian: sudo apt-get install python3-tk
 
 Проблема: Не сохраняются данные
 Решение: Убедитесь, что у программы есть права на запись в папке
+
+Git
+# Создание локального репозитория
+git init
+
+# Создайте файл .gitignore
+echo "__pycache__/" > .gitignore
+echo "*.pyc" >> .gitignore
+
+# Добавление файлов
+git add book_tracker.py README.md .gitignore
+
+# Первый коммит
+git commit -m "Initial commit: Book Tracker application"
+
+# Создание репозитория на GitHub (через сайт)
+# Затем связываем локальный репозиторий с удаленным
+git remote add origin https://github.com/marinakang777/Book-Tracker.git
+
+# Отправка на GitHub
+git branch -M main
+git push -u origin main
